@@ -1,12 +1,5 @@
 package com.generation;
 
-import com.generation.model.entities.Contract;
-import com.generation.model.entities.Employer;
-import com.generation.model.entities.Freelancer;
-import com.generation.model.repositories.ContractRepository;
-import com.generation.model.repositories.EmployerRepository;
-import com.generation.model.repositories.FreelancerRepository;
-
 public class ProvaInserimento
 {
 	public static void main(String[] args)
