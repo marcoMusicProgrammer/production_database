@@ -14,7 +14,6 @@ public abstract class BaseEntity
 	//package/default all'interno dello stesso package
 	//protected - package + tutti i sottotipi, dovunque essi siano
 
-
 	public Integer getId()
 	{
 		return id;
