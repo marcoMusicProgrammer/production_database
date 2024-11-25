@@ -22,7 +22,7 @@ public abstract class RepositoryGenerica<T extends BaseEntity>
 
 	public List<T> findAll()
 	{
-		return em.createQuery("select u from "+entityClass.getSimpleName()+"  u", entityClass).getResultList();
+		return em.createQuery("select u from " + entityClass.getSimpleName() + "  u", entityClass).getResultList();
 	}
 
 	public T find(int id)
@@ -32,9 +32,8 @@ public abstract class RepositoryGenerica<T extends BaseEntity>
 
 	public void insert(T t)
 	{
-
 		//se t ha già un id allora dai eccezione
-		if( t.getId()!=null)
+		if (t.getId() != null)
 			throw new RuntimeException("No, non voglio che id lo dia tu");
 		em.getTransaction().begin();//qui iniziamo la transazione
 		em.persist(t);//persist=save
@@ -53,13 +52,11 @@ public abstract class RepositoryGenerica<T extends BaseEntity>
 
 		T toDelete = find(id);//prima prendiamo lo contract con quell'id
 		if (toDelete == null)//se non l'abbiamo trovato
-			throw new RuntimeException(entityClass.getSimpleName()+" to delete not found");
+			throw new RuntimeException(entityClass.getSimpleName() + " to delete not found");
 
 		em.getTransaction().begin();
 		em.remove(toDelete);
 		em.getTransaction().commit();
 	}
 	//FINE METODI CRUD DI BASE
-
-
 }

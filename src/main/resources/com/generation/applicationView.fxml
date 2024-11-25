@@ -1,8 +1,174 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" prefHeight="579.0" prefWidth="679.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.generation.controller.ApplicationController">
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="963.0" style="-fx-background-color: rgb(10,10,10,0.5);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.generation.controller.ApplicationController">
+   <children>
+      <Pane layoutX="34.0" layoutY="21.0" prefHeight="167.0" prefWidth="366.0" style="-fx-background-color: grey;">
+         <children>
+            <GridPane layoutX="40.0" layoutY="15.0" prefHeight="180.0" prefWidth="290.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Insert Film" textAlignment="CENTER" wrappingWidth="273.13671875">
+                     <font>
+                        <Font name="BoltonTitlingBold" size="12.0" />
+                     </font></Text>
+                  <TextField fx:id="filmTitle" promptText="TITLE" GridPane.rowIndex="1" />
+                  <TextField fx:id="releaseDateFilm" promptText="RELEASE DATE" GridPane.rowIndex="2" />
+                  <TextField fx:id="filmGenre" promptText="GENRE" GridPane.rowIndex="3" />
+                  <TextField fx:id="filmRevenue" promptText="REVENUE" GridPane.rowIndex="4" />
+                  <Button mnemonicParsing="false" onAction="#insertFilm" prefHeight="25.0" prefWidth="326.0" text="Insert" GridPane.rowIndex="5" />
+                  <Text fx:id="insertFilmText" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="275.13671875" GridPane.rowIndex="7" />
+               </children>
+            </GridPane>
+         </children>
+         <effect>
+            <Glow />
+         </effect>
+      </Pane>
+      <Pane layoutX="34.0" layoutY="197.0" prefHeight="67.0" prefWidth="366.0" style="-fx-background-color: grey;">
+         <effect>
+            <Glow />
+         </effect>
+         <children>
+            <Button layoutX="92.0" layoutY="8.0" mnemonicParsing="false" onAction="#assignDirector" prefHeight="25.0" prefWidth="130.0" text="Assegna Director" />
+            <TextField fx:id="assignFilmTitle" layoutX="232.0" layoutY="8.0" prefHeight="25.0" prefWidth="111.0" promptText="Film TItle" />
+            <TextField fx:id="assignIdDirector" layoutX="41.0" layoutY="8.0" prefHeight="25.0" prefWidth="37.0" promptText="ID Director" />
+            <Text fx:id="textAssigned" fill="RED" layoutX="92.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="541.0" layoutY="20.0" prefHeight="243.0" prefWidth="385.0" style="-fx-background-color: grey;">
+         <children>
+            <Text fx:id="getAllEntityText" layoutX="22.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="327.13671875">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Text>
+         </children>
+         <effect>
+            <Glow />
+         </effect>
+      </Pane>
+      <Text fill="RED" layoutX="423.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="98.0" />
+      <Pane layoutX="35.0" layoutY="274.0" prefHeight="253.0" prefWidth="891.0" style="-fx-background-color: grey;">
+         <effect>
+            <Glow />
+         </effect>
+         <children>
+            <GridPane layoutX="39.0" layoutY="37.0" prefHeight="189.0" prefWidth="242.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Insert Director" textAlignment="CENTER" wrappingWidth="244.13671875">
+                     <font>
+                        <Font name="BoltonTitlingBold" size="12.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="insertNameDirector" prefHeight="10.0" prefWidth="290.0" promptText="NAME" GridPane.rowIndex="1" />
+                  <TextField fx:id="insertSurnameDirector" promptText="SURNAME" GridPane.rowIndex="2" />
+                  <TextField fx:id="insertGenderDirector" promptText="GENDER" GridPane.rowIndex="3" />
+                  <TextField fx:id="insertBirthDirector" promptText="BIRTH" GridPane.rowIndex="4" />
+                  <Button mnemonicParsing="false" onAction="#insertDirector" prefHeight="25.0" prefWidth="333.0" text="Insert" GridPane.rowIndex="5" />
+                  <Text fx:id="insertDirectorToText" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="244.13671875" GridPane.rowIndex="6" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="329.0" layoutY="36.0" prefHeight="189.0" prefWidth="213.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Insert Actor" textAlignment="CENTER" wrappingWidth="202.13671875">
+                     <font>
+                        <Font name="BoltonTitlingBold" size="12.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="insertNameActor" promptText="NAME" GridPane.rowIndex="1" />
+                  <TextField fx:id="insertSurnameActor" promptText="SURNAME" GridPane.rowIndex="2" />
+                  <TextField fx:id="insertGenderActor" promptText="GENDER" GridPane.rowIndex="3" />
+                  <TextField fx:id="insertBirthActor" promptText="BIRTH" GridPane.rowIndex="4" />
+                  <Text fx:id="insertActorToText" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="214.0" GridPane.rowIndex="6" />
+                  <Button mnemonicParsing="false" onAction="#insertActor" prefHeight="14.0" prefWidth="259.0" text="Insert" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="584.0" layoutY="28.0" prefHeight="209.0" prefWidth="263.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Insert Gig" textAlignment="CENTER" wrappingWidth="267.30799865722656">
+                     <font>
+                        <Font name="BoltonTitlingBold" size="12.0" />
+                     </font>
+                  </Text>
+                  <Button mnemonicParsing="false" onAction="#insertGig" prefHeight="21.0" prefWidth="264.0" text="Insert" GridPane.rowIndex="6" />
+                  <Text fx:id="insertGigToText" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="266.13671875" GridPane.rowIndex="7" />
+                  <TextField fx:id="characterNameFilm" promptText="CHARACTER ROLE" GridPane.rowIndex="1" />
+                  <TextField fx:id="characterPayment" promptText="PAYMENT" GridPane.rowIndex="2" />
+                  <TextField fx:id="gigSurnameActor" alignment="TOP_LEFT" maxWidth="-Infinity" pickOnBounds="false" prefHeight="25.0" prefWidth="266.0" promptText="SURNAME ACTOR" GridPane.rowIndex="4" />
+                  <TextField fx:id="gigFilmName" prefHeight="25.0" prefWidth="223.0" promptText="FILM NAME" GridPane.rowIndex="5" />
+                  <TextField fx:id="gigNameActor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="263.0" promptText="NAME ACTOR" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <Pane layoutX="412.0" layoutY="20.0" prefHeight="243.0" prefWidth="117.0" style="-fx-background-color: grey;">
+         <children>
+            <Button layoutX="10.0" layoutY="56.0" mnemonicParsing="false" onAction="#getAllFilms" prefHeight="25.0" prefWidth="98.0" text="Get Films" />
+            <Button layoutX="10.0" layoutY="102.0" mnemonicParsing="false" onAction="#gelAllActors" prefHeight="25.0" prefWidth="98.0" text="Get Actors" />
+            <Button layoutX="10.0" layoutY="142.0" mnemonicParsing="false" onAction="#getAllDirectors" prefHeight="25.0" prefWidth="98.0" text="Get Dreictors" />
+         </children>
+         <effect>
+            <Glow />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

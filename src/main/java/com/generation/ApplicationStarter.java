@@ -17,7 +17,7 @@ public class ApplicationStarter extends Application
 
 		FXMLLoader fxmlLoader = new FXMLLoader(ApplicationStarter.class.getResource("applicationView.fxml"));
 		Scene scene = new Scene(fxmlLoader.load());
-		stage.setTitle("Hello!");
+		stage.setTitle("Production Database");
 		stage.setScene(scene);
 		stage.show();
 	}

@@ -8,7 +8,7 @@ import jakarta.persistence.MappedSuperclass;
 import java.time.LocalDate;
 
 @MappedSuperclass
-public class Person extends BaseEntity
+public abstract class Person extends BaseEntity
 {
 	private String name;
 	private String surname;
@@ -48,7 +48,7 @@ public class Person extends BaseEntity
 	{
 		if(dob == null)
 			throw new PersonPropertyException("Dob","null");
-		if(dob.isBefore(LocalDate.now()))
+		if(dob.isAfter(LocalDate.now()))
 			throw new PersonPropertyException("Dob","not before now");
 
 		this.dob = dob;
@@ -60,7 +60,7 @@ public class Person extends BaseEntity
 
 		if(parse == null)
 			throw new PersonPropertyException("Dob","null");
-		if(parse.isBefore(LocalDate.now()))
+		if(parse.isAfter(LocalDate.now()))
 			throw new PersonPropertyException("Dob","not before now");
 
 		this.dob = parse;
